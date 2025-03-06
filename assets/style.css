@@ -23,3 +23,7 @@ body {
 .black-text-orange-hover:hover {
     color: darkorange;
 }
+
+.orange-text {
+    color: darkorange;
+}
