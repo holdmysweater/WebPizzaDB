@@ -5,3 +5,21 @@
     font-weight: 100 900;
     font-style: normal;
 }
+
+body {
+    font-family: "Dodo Rounded VF", sans-serif;
+    font-weight: 600;
+}
+
+.wrapper {
+    padding: 12px calc(50% - 512px);
+}
+
+.black-text-orange-hover {
+    color: black;
+    transition: ease-in-out 0.2s;
+}
+
+.black-text-orange-hover:hover {
+    color: darkorange;
+}
