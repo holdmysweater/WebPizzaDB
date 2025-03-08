@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'your_database';
+$dbname = 'pizzeria';
 $username = 'root';
 $password = 'idfkPl3aseHelp...!';
 
