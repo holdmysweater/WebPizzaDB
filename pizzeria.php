@@ -112,7 +112,7 @@
     </nav>
     <button type="button" class="btn btn-light rounded-5 text-white p-2 px-4" style="background: darkorange">Корзина</button>
 </section>
-<main class="wrapper container-fluid text-center my-3">
+<main class="wrapper container-fluid text-center my-5">
     <table class="table table-bordered">
         <thead>
         <tr class="table-light">
@@ -128,7 +128,7 @@
             <?php foreach ($foodItems as $row): ?>
                 <tr>
                     <th scope="row">
-                        <img src="assets/images/menu/<?php echo htmlspecialchars($row[0]); ?>" style="max-width: 150px;">
+                        <img src="assets/images/menu/<?php echo htmlspecialchars($row[0]); ?>" style="max-width: 200px;">
                     </th>
                     <td class="fw-light"><?php echo htmlspecialchars($row[1]); ?></td>
                     <td class="fw-light"><?php echo htmlspecialchars($row[2]); ?></td>

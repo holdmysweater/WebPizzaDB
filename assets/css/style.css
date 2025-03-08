@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper {
-    padding: 12px calc(50% - 512px);
+    padding: 12px calc(45% - 512px);
 }
 
 .black-text-orange-hover {
