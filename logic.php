@@ -11,7 +11,7 @@ try {
     $query = 'SELECT img_path, foods.name, categories.name, recipe, cost FROM foods inner join categories on foods.id_category = categories.id';
     $stmt = $conn->prepare($query);
     $stmt->execute();
-    $foodItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $foodItems = $stmt->fetchAll(PDO::FETCH_NUM);
 } catch (PDOException $e) {
     die('Database connection failed: ' . $e->getMessage());
 }

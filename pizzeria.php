@@ -113,14 +113,14 @@
     <button type="button" class="btn btn-light rounded-5 text-white p-2 px-4" style="background: darkorange">Корзина</button>
 </section>
 <main class="wrapper container-fluid text-center my-3">
-    <table class="table table-striped">
+    <table class="table table-bordered">
         <thead>
-        <tr>
-            <th scope="col">Изображение</th>
-            <th scope="col">Название</th>
-            <th scope="col">Категория меню</th>
-            <th scope="col">Рецептура</th>
-            <th scope="col">Стоимость</th>
+        <tr class="table-light">
+            <th scope="col" class="fw-medium">Изображение</th>
+            <th scope="col" class="fw-medium">Название</th>
+            <th scope="col" class="fw-medium">Категория</th>
+            <th scope="col" class="fw-medium">Рецептура</th>
+            <th scope="col" class="fw-medium">Стоимость</th>
         </tr>
         </thead>
         <tbody>
@@ -128,14 +128,12 @@
             <?php foreach ($foodItems as $row): ?>
                 <tr>
                     <th scope="row">
-                        <img src="assets/images/menu/<?php echo htmlspecialchars($row['image']); ?>"
-                             style="max-width: 150px;">
+                        <img src="assets/images/menu/<?php echo htmlspecialchars($row[0]); ?>" style="max-width: 150px;">
                     </th>
-                    <td><?php echo htmlspecialchars($row['img_path']); ?></td>
-                    <td><?php echo htmlspecialchars($row['name']); ?></td>
-                    <td><?php echo htmlspecialchars($row['id_category']); ?></td>
-                    <td><?php echo htmlspecialchars($row['recipe']); ?></td>
-                    <td><?php echo htmlspecialchars($row['cost']); ?> ₽</td>
+                    <td class="fw-light"><?php echo htmlspecialchars($row[1]); ?></td>
+                    <td class="fw-light"><?php echo htmlspecialchars($row[2]); ?></td>
+                    <td class="fw-light"><?php echo htmlspecialchars($row[3]); ?></td>
+                    <td class="fw-light"><?php echo htmlspecialchars($row[4]); ?> ₽</td>
                 </tr>
             <?php endforeach; ?>
         <?php else: ?>
