@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Dodo Rounded VF';
-    src: url('fonts/Dodo_Rounded_v2-VF.woff2') format('woff2'),
-    url('fonts/Dodo_Rounded_v2-VF.woff') format('woff');
+    src: url('../fonts/Dodo_Rounded_v2-VF.woff2') format('woff2'),
+    url('../fonts/Dodo_Rounded_v2-VF.woff') format('woff');
     font-weight: 100 900;
     font-style: normal;
 }
