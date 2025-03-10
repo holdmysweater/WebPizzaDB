@@ -112,7 +112,41 @@
     </nav>
     <button type="button" class="btn btn-light rounded-5 text-white p-2 px-4" style="background: darkorange">Корзина</button>
 </section>
-<main class="wrapper container-fluid text-center my-5">
+<main class="wrapper container-fluid text-center mt-4 mb-5">
+    <form class="mb-5" action="pizzeria.php" method="get">
+        <label class="form-label fs-5 fw-bold">Фильтрация результата поиска</label>
+        <div class="mb-3">
+            <label>По цене:</label>
+            <div class="d-flex">
+                <input type="number" name="costFrom" placeholder="Цена от" value="" class="form-control me-2">
+                <input type="number" name="costTo" placeholder="Цена до" value="" class="form-control ms-2">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Фильтрация по категории:</label>
+            <select name="category" class="form-control">
+                <option value="">Все категории</option>
+                <?php if (!empty($categories)): ?>
+                    <?php foreach ($categories as $cat): ?>
+                        <option value="<?php echo htmlspecialchars($cat['id']) ?>"
+                            <?php echo (isset($_GET['category']) && $_GET['category'] == $cat['id']) ? 'selected' : '' ?>>
+                            <?php echo htmlspecialchars($cat['name']) ?>
+                        </option>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label>Фильтрация по рецептуре:</label>
+            <textarea class="form-control" placeholder="Введите рецептуру товара" name="recipe"></textarea>
+        </div>
+        <div class="mb-4">
+            <label>Фильтрация по названию:</label>
+            <input type="text" name="name" placeholder="Введите название товара" value="" class="form-control">
+        </div>
+        <input type="submit" value="Применить фильтр" class="btn btn-primary me-2">
+        <input type="submit" name="clearFilter" value="Очистить фильтр" class="btn btn-danger">
+    </form>
     <table class="table table-bordered">
         <thead>
         <tr class="table-light">
