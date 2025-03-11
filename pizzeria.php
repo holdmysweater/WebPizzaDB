@@ -127,7 +127,10 @@
         <div class="mb-3">
             <label>Фильтрация по категории:</label>
             <select name="category" class="form-control">
-                <option value="">Все категории</option>
+                <option value=""
+                    <?php echo (!(isset($_GET['category'])) || $_GET['category'] == '') ? 'selected' : ''; ?>>
+                    Все категории
+                </option>
                 <?php if (!empty($categories)): ?>
                     <?php foreach ($categories as $cat): ?>
                         <option value="<?php echo htmlspecialchars($cat['id']); ?>"
@@ -151,7 +154,7 @@
         </div>
 
         <input type="submit" value="Применить фильтр" class="btn btn-primary me-2">
-        <input type="submit" name="clearFilter" value="1" class="btn btn-danger">Очистить фильтр</input>
+        <input type="submit" name="clearFilter" value="Очистить фильтр" class="btn btn-danger">
     </form>
     <table class="table table-bordered">
         <thead>
