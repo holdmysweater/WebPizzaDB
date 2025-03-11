@@ -20,29 +20,19 @@ try {
     $whereConditions = [];
     $params = [];
 
-    if (!empty($_GET['name'])) {
-        $whereConditions[] = 'foods.name LIKE :name';
-        $params[':name'] = '%' . $_GET['name'] . '%';
-    }
+    $filters = [
+        'name' => ['query' => 'foods.name LIKE :name', 'value' => fn($v) => "%$v%"],
+        'category' => ['query' => 'foods.id_category = :category', 'value' => fn($v) => $v],
+        'recipe' => ['query' => 'foods.recipe LIKE :recipe', 'value' => fn($v) => "%$v%"],
+        'costFrom' => ['query' => 'foods.cost >= :costFrom', 'value' => fn($v) => (int)$v],
+        'costTo' => ['query' => 'foods.cost <= :costTo', 'value' => fn($v) => (int)$v],
+    ];
 
-    if (!empty($_GET['category'])) {
-        $whereConditions[] = 'foods.id_category = :category';
-        $params[':category'] = $_GET['category'];
-    }
-
-    if (!empty($_GET['recipe'])) {
-        $whereConditions[] = 'foods.recipe LIKE :recipe';
-        $params[':recipe'] = '%' . $_GET['recipe'] . '%';
-    }
-
-    if (!empty($_GET['costFrom'])) {
-        $whereConditions[] = 'foods.cost >= :costFrom';
-        $params[':costFrom'] = (int) $_GET['costFrom'];
-    }
-
-    if (!empty($_GET['costTo'])) {
-        $whereConditions[] = 'foods.cost <= :costTo';
-        $params[':costTo'] = (int) $_GET['costTo'];
+    foreach ($filters as $key => $filter) {
+        if (!empty($_GET[$key])) {
+            $whereConditions[] = $filter['query'];
+            $params[":$key"] = $filter['value']($_GET[$key]);
+        }
     }
 
     $query = 'SELECT img_path, foods.name, categories.name AS category_name, recipe, cost FROM foods INNER JOIN categories ON foods.id_category = categories.id'
