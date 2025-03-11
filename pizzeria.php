@@ -166,7 +166,7 @@
             <?php foreach ($foodItems as $row): ?>
                 <tr>
                     <th scope="row">
-                        <img src="assets/images/menu/<?php echo htmlspecialchars($row['img_path']); ?>" style="max-width: 200px;">
+                        <img src="assets/images/menu/<?php echo htmlspecialchars($row['img_path']); ?>" alt="image" style="max-width: 200px;">
                     </th>
                     <td class="fw-light"><?php echo htmlspecialchars($row['name']); ?></td>
                     <td class="fw-light"><?php echo htmlspecialchars($row['category_name']); ?></td>
