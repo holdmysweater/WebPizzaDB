@@ -8,7 +8,6 @@ try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Fetch categories for dropdown
     $categoryStmt = $conn->prepare("SELECT id, name FROM categories");
     $categoryStmt->execute();
     $categories = $categoryStmt->fetchAll(PDO::FETCH_ASSOC);
@@ -47,8 +46,7 @@ try {
     }
 
     $whereClause = !empty($whereConditions) ? ' WHERE ' . implode(' AND ', $whereConditions) : '';
-    $query = "SELECT img_path, foods.name, categories.name AS category_name, recipe, cost 
-              FROM foods 
+    $query = "SELECT img_path, foods.name, categories.name AS category_name, recipe, cost FROM foods 
               INNER JOIN categories ON foods.id_category = categories.id 
               $whereClause";
 

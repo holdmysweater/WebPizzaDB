@@ -115,7 +115,6 @@
 <main class="wrapper container-fluid text-center mt-4 mb-5">
     <form class="mb-5" action="pizzeria.php" method="get">
         <label class="form-label fs-5 fw-bold">Фильтрация результата поиска</label>
-
         <div class="mb-3">
             <label>По цене:</label>
             <div class="d-flex">
@@ -123,7 +122,6 @@
                 <input type="number" name="costTo" placeholder="Цена до" class="form-control ms-2" value="<?php echo isset($_GET['costTo']) ? htmlspecialchars($_GET['costTo']) : ''; ?>">
             </div>
         </div>
-
         <div class="mb-3">
             <label>Фильтрация по категории:</label>
             <select name="category" class="form-control">
@@ -141,18 +139,15 @@
                 <?php endif; ?>
             </select>
         </div>
-
         <div class="mb-3">
             <label>Фильтрация по рецептуре:</label>
             <textarea class="form-control" placeholder="Введите рецептуру товара" name="recipe"><?php echo isset($_GET['recipe']) ? htmlspecialchars($_GET['recipe']) : ''; ?></textarea>
         </div>
-
         <div class="mb-4">
             <label>Фильтрация по названию:</label>
             <input type="text" name="name" placeholder="Введите название товара" class="form-control"
                    value="<?php echo isset($_GET['name']) ? htmlspecialchars($_GET['name']) : ''; ?>">
         </div>
-
         <input type="submit" value="Применить фильтр" class="btn btn-primary me-2">
         <input type="submit" name="clearFilter" value="Очистить фильтр" class="btn btn-danger">
     </form>
