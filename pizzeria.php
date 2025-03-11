@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Пиццерия</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.svg">
-    <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.svg">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/assets/css/style.css"/>
 </head>
 <body>
 <nav class="nav wrapper small align-items-center border-bottom py-2">
