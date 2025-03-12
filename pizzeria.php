@@ -142,13 +142,13 @@
             </select>
         </div>
         <div class="mb-3">
-            <label>Фильтрация по рецептуре:</label>
-            <textarea class="form-control" placeholder="Введите рецептуру товара" name="recipe"><?php echo isset($_GET['recipe']) ? htmlspecialchars($_GET['recipe']) : '';?></textarea>
-        </div>
-        <div class="mb-4">
             <label>Фильтрация по названию:</label>
             <input type="text" name="name" placeholder="Введите название товара" class="form-control"
                    value="<?php echo isset($_GET['name']) ? htmlspecialchars($_GET['name']) : ''; ?>">
+        </div>
+        <div class="mb-4">
+            <label>Фильтрация по рецептуре:</label>
+            <textarea class="form-control" placeholder="Введите рецептуру товара" name="recipe"><?php echo isset($_GET['recipe']) ? htmlspecialchars($_GET['recipe']) : '';?></textarea>
         </div>
         <input type="submit" value="Применить фильтр" class="btn btn-primary me-2">
         <input type="submit" name="clearFilter" value="Очистить фильтр" class="btn btn-danger">
