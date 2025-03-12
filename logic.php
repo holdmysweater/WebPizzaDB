@@ -21,9 +21,9 @@ try {
     $params = [];
 
     $filters = [
-        'name' => ['query' => 'foods.name LIKE :name', 'value' => fn($v) => "%$v%"],
+        'name' => ['query' => 'LOWER(foods.name) LIKE LOWER(:name)', 'value' => fn($v) => "%$v%"],
         'category' => ['query' => 'foods.id_category = :category', 'value' => fn($v) => $v],
-        'recipe' => ['query' => 'foods.recipe LIKE :recipe', 'value' => fn($v) => "%$v%"],
+        'recipe' => ['query' => 'LOWER(foods.recipe) LIKE LOWER(:recipe)', 'value' => fn($v) => "%$v%"],
         'costFrom' => ['query' => 'foods.cost >= :costFrom', 'value' => fn($v) => (int)$v],
         'costTo' => ['query' => 'foods.cost <= :costTo', 'value' => fn($v) => (int)$v],
     ];
