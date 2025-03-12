@@ -143,9 +143,7 @@
         </div>
         <div class="mb-3">
             <label>Фильтрация по рецептуре:</label>
-            <textarea class="form-control" placeholder="Введите рецептуру товара" name="recipe">
-                <?php echo isset($_GET['recipe']) ? htmlspecialchars($_GET['recipe']) : ''; ?>
-            </textarea>
+            <textarea class="form-control" placeholder="Введите рецептуру товара" name="recipe"><?php echo isset($_GET['recipe']) ? htmlspecialchars($_GET['recipe']) : '';?></textarea>
         </div>
         <div class="mb-4">
             <label>Фильтрация по названию:</label>
