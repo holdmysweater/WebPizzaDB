@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Пиццерия</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.svg">
-    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/assets/css/style.css"/>
 </head>
 <body>
 <nav class="nav wrapper small align-items-center border-bottom py-2">
@@ -119,9 +119,9 @@
             <label>По цене:</label>
             <div class="d-flex">
                 <input type="number" name="costFrom" placeholder="Цена от" class="form-control me-2"
-                       value="<?php echo isset($_GET['costFrom']) ? htmlspecialchars($_GET['costFrom']) : ''; ?>">
+                       value="<?php echo (isset($_GET['costFrom']) && htmlspecialchars($_GET['costFrom']) !== '') ? (int)$_GET['costFrom'] : ''; ?>">
                 <input type="number" name="costTo" placeholder="Цена до" class="form-control ms-2"
-                       value="<?php echo isset($_GET['costTo']) ? htmlspecialchars($_GET['costTo']) : ''; ?>">
+                       value="<?php echo (isset($_GET['costTo']) && htmlspecialchars($_GET['costFrom']) !== '') ? (int)$_GET['costTo'] : ''; ?>">
             </div>
         </div>
         <div class="mb-3">
@@ -133,7 +133,7 @@
                 </option>
                 <?php if (!empty($categories)): ?>
                     <?php foreach ($categories as $cat): ?>
-                        <option value="<?php echo htmlspecialchars($cat['id']); ?>"
+                        <option value="<?php echo (int)$cat['id']; ?>"
                             <?php echo (isset($_GET['category']) && (int)$_GET['category'] === $cat['id']) ? 'selected' : ''; ?>>
                             <?php echo htmlspecialchars($cat['name']); ?>
                         </option>
