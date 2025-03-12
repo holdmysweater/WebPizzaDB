@@ -118,8 +118,10 @@
         <div class="mb-3">
             <label>По цене:</label>
             <div class="d-flex">
-                <input type="number" name="costFrom" placeholder="Цена от" class="form-control me-2" value="<?php echo isset($_GET['costFrom']) ? htmlspecialchars($_GET['costFrom']) : ''; ?>">
-                <input type="number" name="costTo" placeholder="Цена до" class="form-control ms-2" value="<?php echo isset($_GET['costTo']) ? htmlspecialchars($_GET['costTo']) : ''; ?>">
+                <input type="number" name="costFrom" placeholder="Цена от" class="form-control me-2"
+                       value="<?php echo isset($_GET['costFrom']) ? htmlspecialchars($_GET['costFrom']) : ''; ?>">
+                <input type="number" name="costTo" placeholder="Цена до" class="form-control ms-2"
+                       value="<?php echo isset($_GET['costTo']) ? htmlspecialchars($_GET['costTo']) : ''; ?>">
             </div>
         </div>
         <div class="mb-3">
@@ -141,7 +143,9 @@
         </div>
         <div class="mb-3">
             <label>Фильтрация по рецептуре:</label>
-            <textarea class="form-control" placeholder="Введите рецептуру товара" name="recipe"><?php echo isset($_GET['recipe']) ? htmlspecialchars($_GET['recipe']) : ''; ?></textarea>
+            <textarea class="form-control" placeholder="Введите рецептуру товара" name="recipe">
+                <?php echo isset($_GET['recipe']) ? htmlspecialchars($_GET['recipe']) : ''; ?>
+            </textarea>
         </div>
         <div class="mb-4">
             <label>Фильтрация по названию:</label>
