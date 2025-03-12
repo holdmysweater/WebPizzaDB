@@ -126,13 +126,13 @@
             <label>Фильтрация по категории:</label>
             <select name="category" class="form-control">
                 <option value=""
-                    <?php echo (!(isset($_GET['category'])) || $_GET['category'] == '') ? 'selected' : ''; ?>>
+                    <?php echo (!(isset($_GET['category'])) || $_GET['category'] === '') ? 'selected' : ''; ?>>
                     Все категории
                 </option>
                 <?php if (!empty($categories)): ?>
                     <?php foreach ($categories as $cat): ?>
                         <option value="<?php echo htmlspecialchars($cat['id']); ?>"
-                            <?php echo (isset($_GET['category']) && $_GET['category'] == $cat['id']) ? 'selected' : ''; ?>>
+                            <?php echo (isset($_GET['category']) && (int)$_GET['category'] === $cat['id']) ? 'selected' : ''; ?>>
                             <?php echo htmlspecialchars($cat['name']); ?>
                         </option>
                     <?php endforeach; ?>
