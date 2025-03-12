@@ -29,7 +29,7 @@ try {
     ];
 
     foreach ($filters as $key => $filter) {
-        if (!empty($_GET[$key])) {
+        if (isset($_GET[$key]) && $_GET[$key] !== '') {
             $whereConditions[] = $filter['query'];
             $params[":$key"] = $filter['value']($_GET[$key]);
         }
