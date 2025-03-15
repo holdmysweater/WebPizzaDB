@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Dodo Rounded VF';
-    src: url('../fonts/Dodo_Rounded_v2-VF.woff2') format('woff2'),
-    url('../fonts/Dodo_Rounded_v2-VF.woff') format('woff');
+    src: url('/assets/fonts/Dodo_Rounded_v2-VF.woff2') format('woff2'),
+    url('/assets/fonts/Dodo_Rounded_v2-VF.woff') format('woff');
     font-weight: 100 900;
     font-style: normal;
 }
@@ -15,15 +15,33 @@ body {
     padding: 12px calc(45% - 512px);
 }
 
-.black-text-orange-hover {
+.text-black-hover-orange {
     color: black;
     transition: ease-in-out 0.2s;
 }
 
-.black-text-orange-hover:hover {
+.text-black-hover-orange:hover {
     color: darkorange;
 }
 
-.orange-text {
+.text-orange {
     color: darkorange;
+    transition: ease-in-out 0.2s;
+}
+
+.hover-darkorange {
+    transition: ease-in-out 0.2s;
+}
+
+.hover-darkorange:hover {
+    color: #cf6f00;
+}
+
+.hover-orange {
+    transition: ease-in-out 0.2s;
+}
+
+.hover-orange:hover {
+    background: darkorange;
+    border-color: darkorange;
 }
