@@ -1,3 +1,3 @@
 <?php
-header('Location: pizzeria.php');
+header('Location: login.php');
 ?>
