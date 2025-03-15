@@ -1,366 +1,84 @@
-<?php include 'logic.php'; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Пиццерия</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.svg">
-    <link rel="stylesheet" href="/assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="/assets/css/style.css"/>
-</head>
-<body>
-<nav class="nav wrapper small align-items-center border-bottom py-2">
-    <a class="nav-link black-text-orange-hover ps-1 d-flex align-items-center" aria-current="page" href="#">
-        <div class="rounded-circle" style="background: red; width: 8px; height: 8px;"></div>
-        <p class="m-0 ms-1">Прямой эфир</p>
-    </a>
-    <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Работа в Додо</a>
-    <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">О нас</a>
-    <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Контакты</a>
-    <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Корпоративные заказы</a>
-</nav>
-<header class="wrapper d-flex justify-content-between align-items-center mt-2">
-    <div class="d-flex">
-        <div class="d-flex flex-column me-5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="250" height="42" fill="none" viewBox="0 0 250 42">
-                <g clip-path="url(#59ec6f-a)">
-                    <path fill="#FF6900" d="M18.77 0c12.206 0 21.59 8.4 21.59 20.868C40.36 33.338 30.976 42 18.77 42H5.053A4.82 4.82 0 0 1 0 36.947V5.25A4.98 4.98 0 0 1 5.054 0z"></path>
-                    <path fill="#000"
-                          d="M32.813 16.34c-.066.526-.657.526-.92.066-.852-1.443-1.968-1.706-3.74-1.837-1.312-.066-2.887.065-4.331.065a.3.3 0 0 1-.294-.151.3.3 0 0 1-.034-.111c.262-1.247 1.312-3.544 2.428-3.74.525-.066 1.706-.197 2.362-.197 3.02 0 4.66 3.478 4.529 5.906M15.75 28.22c2.224.591 4.53.813 6.825.656a18.2 18.2 0 0 0 8.466-2.756c-.985 2.494-4.725 4.069-8.27 4.462 0 .197-.065.329-.065.525 2.26-.09 4.465-.72 6.432-1.837-.657 2.428-3.938 3.412-6.957 3.61a4 4 0 0 1-.262.524c1.486.021 2.968-.178 4.397-.59-1.378 2.559-7.285 4.33-12.272 1.968a15.75 15.75 0 0 0 1.706-6.562m16.472-17.456a5.77 5.77 0 0 0-4.135-1.575c-1.968 0-3.609.525-6.037.59-1.64.066-3.15-3.544-5.119-4.003-.853-1.903-2.822-2.166-4.003-1.181-1.116-.656-2.822-.328-2.887.919-1.247-.394-2.888.262-2.166 1.968-3.084.066-3.61 2.822-1.575 3.085-2.69 1.51-1.444 4.134.788 3.61.393 3.937 2.165 9.055-.722 10.302-.328.131-1.641.46-4.135-.131L0 23.757v2.034c2.166.525 4.331.918 5.71.787 3.806-.393 4.003-3.543 3.806-6.3s-1.116-5.84-.788-8.072l-.131-.13c-1.378 1.443-2.297 1.05-2.428.59-.197-.919 1.444-2.1 2.362-2.494 0-.066.066-.131.066-.197-.853.131-1.903 0-1.969-.59-.066-.722 1.444-1.444 3.413-1.247.065 0 .065-.066.13-.066l-.393-.197c-.525-.262-.656-.722-.46-.984a1.4 1.4 0 0 1 1.182-.46 4.4 4.4 0 0 1 1.772.394c.066 0 .066-.066.131-.066-.131-.13-.328-.262-.394-.393a.5.5 0 0 1 .066-.657 1.37 1.37 0 0 1 1.575.263l.328.328a.24.24 0 0 0 .197-.066.7.7 0 0 1-.197-.459.394.394 0 0 1 .263-.525.8.8 0 0 1 .787.328c.173.264.305.551.394.853a5.45 5.45 0 0 0-4.003 2.035 6.26 6.26 0 0 0-.788 5.381 38.7 38.7 0 0 0 1.903 5.906v.066c1.575 4.528 4.594 15.684-10.04 21.59A6 6 0 0 0 4.922 42h1.51a18.96 18.96 0 0 0 6.496-5.381c6.694 2.953 12.797 1.444 15.422-3.413a6.41 6.41 0 0 0 2.953-4.725 4.91 4.91 0 0 0 .985-4.265c-.066-.263-.329-.263-.722-.066-5.447 3.281-10.238 3.806-15.947 2.1a43 43 0 0 0-.788-5.315c-.131-2.297.59-3.413 4.79-2.035 2.757.722 4.004 1.969 4.988 2.625.46.328 1.05.722 1.378.46.197-.132.263-.526.263-.985a10.9 10.9 0 0 0-1.181-4.134 34 34 0 0 1 3.74 0 2.11 2.11 0 0 1 1.903 1.444c.46 1.312 3.02.984 3.216-.132.394-2.297.525-5.315-1.706-7.415M3.084 30.45a24 24 0 0 0-3.084 0v1.378c1.772-.393 2.888-.59 2.888-.59z"></path>
-                    <path fill="#fff"
-                          d="M19.491 16.078c-2.297-.525-4.856-1.182-6.169-3.15 0-.066-.065-.066-.13-.066a.066.066 0 0 0-.066.066.6.6 0 0 0 .065.328l-.197.065a1.31 1.31 0 0 1-.065-1.575 1.686 1.686 0 0 1 2.165-.196l-.065.196a1.44 1.44 0 0 0-.92.066.354.354 0 0 0-.13.525c1.115 2.1 4.397 2.56 8.268 2.231a.466.466 0 0 0 .525-.393 7.44 7.44 0 0 1 1.838-3.479c-.629.103-1.266.147-1.903.132-1.969.13-3.15-.132-3.478-.394l.065-.197c.197.066.46.066.46 0s0-.131-.066-.197c-.394-.328-2.1-2.1-2.1-2.1-.197-1.51-2.362-1.51-3.216-.065l-.262-.066c.057-.282.168-.55.328-.788a4.115 4.115 0 0 0-3.019 3.544c-.787 6.694 9.385 5.119 12.272 7.81.066.065.197.262.263.13.065-.13-1.182-1.705-4.463-2.427M15.947 8.07c.46-.13 1.182.329 1.51 1.05s.262 1.444-.197 1.641c-.46.197-1.181-.328-1.51-1.05-.065-.131-.065-.197-.13-.328h.065a.43.43 0 0 0 .46.131c.196-.131.13-.394 0-.656-.132-.263-.329-.394-.526-.394l-.065-.065a.87.87 0 0 1 .393-.329M31.041 26.118a18.2 18.2 0 0 1-8.465 2.756c-2.295.12-4.595-.1-6.825-.656q-.001.994-.197 1.969a27.3 27.3 0 0 0 5.84.722 9.8 9.8 0 0 1-2.821 4.987c3.543.132 6.759-1.247 7.743-3.084a13.4 13.4 0 0 1-4.397.59c.066-.196.197-.328.263-.525 3.019-.13 6.3-1.115 6.956-3.609a14.2 14.2 0 0 1-6.431 1.838c0-.197.066-.329.066-.525 3.543-.46 7.284-1.97 8.268-4.463"></path>
-                </g>
-                <g clip-path="url(#59ec6f-b)">
-                    <path fill="#000"
-                          d="M240.469 22.968c-.92 0-1.841-.13-2.695-.328l2.629-5.84 2.629 5.84c-.854.197-1.709.328-2.563.328m9.268 4.463-6.113-13.388c-.723-1.443-1.643-2.1-3.024-2.1h-.263c-1.446 0-2.366.657-3.089 2.1l-6.113 13.388c-.591 1.312-.197 2.494 1.052 2.953 1.052.46 2.235.066 2.761-.984l.065-.132 1.381-2.887c1.38.46 2.76.656 4.206.656 1.381 0 2.761-.197 4.01-.656l1.314 2.887c.395 1.05 1.578 1.575 2.695 1.182h.066l.132-.066c1.051-.46 1.577-1.706 1.117-2.756-.132-.066-.132-.131-.197-.197m-22.085-1.247h-1.183V13.978c.065-1.181-.921-2.166-2.104-2.232h-.197c-1.183-.065-2.169.854-2.235 2.035V26.25h-7.822V13.978a2.29 2.29 0 0 0-2.431-2.166 2.28 2.28 0 0 0-2.17 2.166v14.437c-.065 1.181.789 2.166 1.972 2.232h13.803v1.968c-.065 1.181.789 2.166 1.972 2.231h.198c1.117.066 2.169-.787 2.234-1.903v-4.396c.132-1.116-.723-2.1-1.774-2.232h-.395m-22.611-.131h-1.183V13.978c.066-1.181-.92-2.166-2.103-2.232h-.132c-1.183 0-2.103.92-2.169 2.1V26.25h-7.821V13.978a2.29 2.29 0 0 0-2.432-2.166 2.28 2.28 0 0 0-2.169 2.166v14.437c-.066 1.181.788 2.166 1.971 2.232h13.804v1.968c-.066 1.181.788 2.166 1.971 2.231h.198c1.117.132 2.169-.721 2.3-1.837v-4.528c.132-1.116-.723-2.1-1.775-2.231h-.394m-25.174-14.307h-.197c-1.315 0-2.235.657-3.155 1.97l-7.362 10.433V14.11a2.187 2.187 0 0 0-2.169-2.166 2.187 2.187 0 0 0-2.169 2.166v13.913c-.066 1.312.854 2.428 2.169 2.493h.591c1.381 0 2.367-.722 3.221-1.968l7.362-10.435v10.172c0 1.181.986 2.166 2.169 2.166a2.187 2.187 0 0 0 2.169-2.166V14.437c.131-1.312-.854-2.428-2.169-2.494zm-21.954 0h-12.62c-1.117-.065-2.169.788-2.235 1.904v14.7c-.065 1.18.921 2.165 2.104 2.23h.197c1.183.066 2.169-.852 2.235-2.034V16.275h8.084v12.272c-.065 1.18.855 2.165 2.038 2.23h.263c1.183.066 2.235-.852 2.301-2.034V14.11c0-1.181-.921-2.166-2.038-2.166zm-32.667 14.57c-2.958 0-5.061-2.232-5.061-5.25 0-2.823 2.3-5.054 5.061-5.054 2.76 0 5.061 2.297 5.061 5.053.066 3.019-2.038 5.25-5.061 5.25m0-14.7a9.34 9.34 0 0 0-9.597 9.121v.394c-.131 5.184 4.01 9.45 9.137 9.515h.394c5.193.066 9.531-4.068 9.597-9.253v-.262c.065-5.119-4.076-9.385-9.203-9.45zM106.841 26.25h-7.427c.526-.985.854-2.035 1.117-3.15.263-1.51.46-3.085.46-4.594l.066-2.166h5.719zm5.653 0h-1.183V14.109c.066-1.181-.789-2.166-1.972-2.231H98.691c-1.249 0-2.038.787-2.038 2.231v2.953a26 26 0 0 1-.394 5.513c-.197 1.312-.723 2.559-1.446 3.675h-.526c-1.117-.066-2.103.721-2.169 1.837v4.528c-.066 1.181.789 2.166 1.972 2.231h.197c1.117.066 2.17-.787 2.235-1.903v-2.231h13.606v1.969c-.066 1.181.789 2.166 1.972 2.231h.197c1.117.066 2.169-.787 2.235-1.903v-4.397c.131-1.05-.592-2.1-1.709-2.231h-.46m-30.302.131c-2.957 0-5.06-2.231-5.06-5.25 0-2.822 2.3-5.053 5.06-5.053a5.06 5.06 0 0 1 5.062 5.053c.065 3.019-1.907 5.25-5.062 5.25m0-14.7a9.337 9.337 0 0 0-9.596 9.122v.394a9.24 9.24 0 0 0 9.136 9.515h.46c5.193.066 9.531-4.068 9.597-9.253v-.262c.066-5.578-4.075-9.516-9.597-9.516M63.591 26.25H56.23c.526-1.05.854-2.1 1.117-3.216.263-1.51.46-3.084.46-4.594l.066-2.165h5.719zm5.653 0h-1.183V14.109c.066-1.181-.789-2.166-1.972-2.231H55.573c-1.25 0-2.038.787-2.038 2.231v2.953a26 26 0 0 1-.394 5.513c-.198 1.312-.723 2.559-1.447 3.675h-.525c-1.118-.066-2.104.721-2.17 1.837v4.528c-.065 1.181.79 2.166 1.972 2.231h.198c1.117.066 2.169-.787 2.235-1.903v-2.231H67.01v1.969c-.066 1.181.788 2.166 1.971 2.231h.198c1.117.066 2.169-.787 2.234-1.903v-4.397c.132-1.115-.723-2.1-1.774-2.231-.132-.197-.263-.197-.395-.131"></path>
-                </g>
-                <defs>
-                    <clipPath id="59ec6f-a">
-                        <path fill="#fff" d="M0 0h42v42H0z"></path>
-                    </clipPath>
-                    <clipPath id="59ec6f-b">
-                        <path fill="#fff" d="M49 0h201v42H49z"></path>
-                    </clipPath>
-                </defs>
-            </svg>
-            <div class="d-flex ms-5 flex-column small">
-                <p class="small m-0">Сеть №1 в России</p>
-                <p class="small m-0 orange-text">по количеству пиццерий</p>
+<?php
+require_once($_SERVER['DOCUMENT_ROOT'] . '/.core/index.php');
+
+$signUpErrors = UserActions::signUp();
+
+require_once($_SERVER['DOCUMENT_ROOT'] . '/templates/header.php');
+?>
+
+    <main class="wrapper container-fluid text-center mt-4 mb-5">
+        <form class="mb-5" action="pizzeria.php" method="get">
+            <label class="form-label fs-5 fw-bold">Фильтрация результата поиска</label>
+            <div class="mb-3">
+                <label>По цене:</label>
+                <div class="d-flex">
+                    <input type="number" name="costFrom" placeholder="Цена от" class="form-control me-2"
+                           value="<?php echo (isset($_GET['costFrom']) && htmlspecialchars($_GET['costFrom']) !== '') ? (int)$_GET['costFrom'] : ''; ?>">
+                    <input type="number" name="costTo" placeholder="Цена до" class="form-control ms-2"
+                           value="<?php echo (isset($_GET['costTo']) && htmlspecialchars($_GET['costFrom']) !== '') ? (int)$_GET['costTo'] : ''; ?>">
+                </div>
             </div>
-        </div>
-        <div class="d-flex flex-column">
-            <div>
-                <span class="m-0 fs-5">Доставка пиццы</span>
-                <a class="link-underline link-underline-opacity-0 m-0 fs-5 orange-text" aria-current="page" href="#">Волгоград</a>
+            <div class="mb-3">
+                <label>Фильтрация по категории:</label>
+                <select name="category" class="form-control">
+                    <option value=""
+                        <?php echo (!(isset($_GET['category'])) || $_GET['category'] === '') ? 'selected' : ''; ?>>
+                        Все категории
+                    </option>
+                    <?php if (!empty($categories)): ?>
+                        <?php foreach ($categories as $cat): ?>
+                            <option value="<?php echo (int)$cat['id']; ?>"
+                                <?php echo (isset($_GET['category']) && (int)$_GET['category'] === $cat['id']) ? 'selected' : ''; ?>>
+                                <?php echo htmlspecialchars($cat['name']); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </select>
             </div>
-            <div class="d-flex align-items-center">
-                <span class="m-0 me-2 small">30 мин</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                    <circle cx="8" cy="8" r="8"/>
-                </svg>
-                <span class="m-0 mx-2 small">4.88</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                    <defs>
-                        <linearGradient id="e83c58-a">
-                            <stop offset="50%" stop-color="#FFD200"></stop>
-                            <stop offset="50%" stop-color="#999" stop-opacity="0.5"></stop>
-                        </linearGradient>
-                    </defs>
-                    <path fill="url(#e83c58-a)"
-                          d="M8.451 1.49a1 1 0 0 0-.902 0c-.245.123-.378.359-.461.528-.09.182-.185.427-.296.712l-.928 2.39a3 3 0 0 1-.07.173v.002H5.79c-.036.006-.086.01-.184.02l-2.504.214c-.272.024-.51.044-.695.077-.176.032-.418.09-.6.274a1 1 0 0 0-.28.826c.03.256.186.45.307.583.126.139.302.3.503.485l1.987 1.823.125.118.002.002v.003c-.006.033-.016.079-.036.168l-.592 2.66a9 9 0 0 0-.145.73c-.024.184-.042.445.087.68a1 1 0 0 0 .733.508c.265.038.504-.072.667-.16a9 9 0 0 0 .632-.392l2.036-1.332c.086-.056.13-.085.164-.104L8 12.476l.003.002c.033.019.078.048.164.104l2.036 1.332c.246.161.458.3.632.393.163.087.401.197.667.159a1 1 0 0 0 .733-.508c.13-.235.11-.496.087-.68a9 9 0 0 0-.145-.73l-.592-2.66c-.02-.09-.03-.135-.035-.168v-.003l.001-.002.125-.118 1.987-1.823c.201-.185.377-.346.503-.485.12-.133.276-.327.308-.583a1 1 0 0 0-.281-.826c-.182-.183-.424-.242-.6-.274-.185-.033-.423-.053-.695-.077l-2.504-.215a3 3 0 0 1-.184-.018h-.003l-.002-.003a3 3 0 0 1-.069-.172l-.928-2.39a10 10 0 0 0-.296-.713c-.083-.17-.216-.405-.46-.529"></path>
-                </svg>
+            <div class="mb-3">
+                <label>Фильтрация по названию:</label>
+                <input type="text" name="name" placeholder="Введите название товара" class="form-control"
+                       value="<?php echo isset($_GET['name']) ? htmlspecialchars($_GET['name']) : ''; ?>">
             </div>
-        </div>
-    </div>
-    <div class="d-flex align-items-center">
-        <div class="d-flex flex-column mx-4 black-text-orange-hover">
-            <svg xmlns="http://www.w3.org/2000/svg" height="28" fill="none" viewBox="0 0 24 24">
-                <path fill="#000" fill-rule="evenodd"
-                      d="M11 1a1 1 0 0 1 1 1v2a8 8 0 1 1 0 16v2a1 1 0 1 1-2 0v-2H6.6c-.56 0-.84 0-1.05-.1a1 1 0 0 1-.44-.45C5 19.24 5 18.96 5 18.4V5.6c0-.56 0-.84.1-1.05a1 1 0 0 1 .45-.44C5.76 4 6.04 4 6.6 4H10V2a1 1 0 0 1 1-1m1 17a6 6 0 0 0 0-12H7v12z"
-                      clip-rule="evenodd"></path>
-            </svg>
-            <p class="small m-0">Додокоины</p>
-        </div>
-        <button type="button" class="btn btn-light rounded-5 small d-flex align-items-center fw-medium" style="height: 30px;">
-            <span class="small">Войти</span>
-        </button>
-    </div>
-</header>
-<section class="wrapper bg-white d-flex align-items-center justify-content-between position-sticky sticky-top py-1 shadow-sm">
-    <nav class="nav small align-items-center py-2">
-        <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Пиццы</a>
-        <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Комбо</a>
-        <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Закуски</a>
-        <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Коктейли</a>
-        <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Кофе</a>
-        <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Напитки</a>
-        <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Десерты</a>
-        <a class="nav-link black-text-orange-hover ps-1" aria-current="page" href="#">Соусы</a>
-        <button type="button" class="btn btn-light rounded-5 small d-flex align-items-center fw-medium me-2" style="height: 30px;">
-            <span class="small me-1">Ещё</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" data-active="false">
-                <path fill="#000"
-                      d="M13.763 5.492a.66.66 0 0 0-.94.08C11.25 7.46 8.998 9.964 8.008 11.057L3.165 5.56a.663.663 0 0 0-.941-.056.677.677 0 0 0-.056.95l5.177 5.876c.11.125.23.234.388.291.17.061.355.062.525.004a.95.95 0 0 0 .391-.283c.675-.741 3.375-3.721 5.194-5.902a.677.677 0 0 0-.08-.947"></path>
-            </svg>
-        </button>
-        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-            <circle cx="8" cy="8" r="8"/>
-        </svg>
-        <a class="nav-link black-text-orange-hover ps-1 ms-1" aria-current="page" href="#">Акции</a>
-    </nav>
-    <button type="button" class="btn btn-light rounded-5 text-white p-2 px-4" style="background: darkorange">Корзина</button>
-</section>
-<main class="wrapper container-fluid text-center mt-4 mb-5">
-    <form class="mb-5" action="pizzeria.php" method="get">
-        <label class="form-label fs-5 fw-bold">Фильтрация результата поиска</label>
-        <div class="mb-3">
-            <label>По цене:</label>
-            <div class="d-flex">
-                <input type="number" name="costFrom" placeholder="Цена от" class="form-control me-2"
-                       value="<?php echo (isset($_GET['costFrom']) && htmlspecialchars($_GET['costFrom']) !== '') ? (int)$_GET['costFrom'] : ''; ?>">
-                <input type="number" name="costTo" placeholder="Цена до" class="form-control ms-2"
-                       value="<?php echo (isset($_GET['costTo']) && htmlspecialchars($_GET['costFrom']) !== '') ? (int)$_GET['costTo'] : ''; ?>">
+            <div class="mb-4">
+                <label>Фильтрация по рецептуре:</label>
+                <textarea class="form-control" placeholder="Введите рецептуру товара" name="recipe"><?php echo isset($_GET['recipe']) ? htmlspecialchars($_GET['recipe']) : ''; ?></textarea>
             </div>
-        </div>
-        <div class="mb-3">
-            <label>Фильтрация по категории:</label>
-            <select name="category" class="form-control">
-                <option value=""
-                    <?php echo (!(isset($_GET['category'])) || $_GET['category'] === '') ? 'selected' : ''; ?>>
-                    Все категории
-                </option>
-                <?php if (!empty($categories)): ?>
-                    <?php foreach ($categories as $cat): ?>
-                        <option value="<?php echo (int)$cat['id']; ?>"
-                            <?php echo (isset($_GET['category']) && (int)$_GET['category'] === $cat['id']) ? 'selected' : ''; ?>>
-                            <?php echo htmlspecialchars($cat['name']); ?>
-                        </option>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label>Фильтрация по названию:</label>
-            <input type="text" name="name" placeholder="Введите название товара" class="form-control"
-                   value="<?php echo isset($_GET['name']) ? htmlspecialchars($_GET['name']) : ''; ?>">
-        </div>
-        <div class="mb-4">
-            <label>Фильтрация по рецептуре:</label>
-            <textarea class="form-control" placeholder="Введите рецептуру товара" name="recipe"><?php echo isset($_GET['recipe']) ? htmlspecialchars($_GET['recipe']) : '';?></textarea>
-        </div>
-        <input type="submit" value="Применить фильтр" class="btn btn-primary me-2">
-        <input type="submit" name="clearFilter" value="Очистить фильтр" class="btn btn-danger">
-    </form>
-    <table class="table table-bordered">
-        <thead>
-        <tr class="table-light">
-            <th scope="col" class="fw-medium">Изображение</th>
-            <th scope="col" class="fw-medium">Название</th>
-            <th scope="col" class="fw-medium">Категория</th>
-            <th scope="col" class="fw-medium">Рецептура</th>
-            <th scope="col" class="fw-medium">Стоимость</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php if (!empty($foodItems)): ?>
-            <?php foreach ($foodItems as $row): ?>
-                <tr>
-                    <th scope="row">
-                        <img src="assets/images/menu/<?php echo htmlspecialchars($row['img_path']); ?>" alt="image" style="max-width: 200px;">
-                    </th>
-                    <td class="fw-light"><?php echo htmlspecialchars($row['name']); ?></td>
-                    <td class="fw-light"><?php echo htmlspecialchars($row['category_name']); ?></td>
-                    <td class="fw-light"><?php echo htmlspecialchars($row['recipe']); ?></td>
-                    <td class="fw-light"><?php echo htmlspecialchars($row['cost']); ?> ₽</td>
-                </tr>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <tr>
-                <td colspan="5">Нет данных</td>
+            <input type="submit" value="Применить фильтр" class="btn btn-primary me-2">
+            <input type="submit" name="clearFilter" value="Очистить фильтр" class="btn btn-danger">
+        </form>
+        <table class="table table-bordered">
+            <thead>
+            <tr class="table-light">
+                <th scope="col" class="fw-medium">Изображение</th>
+                <th scope="col" class="fw-medium">Название</th>
+                <th scope="col" class="fw-medium">Категория</th>
+                <th scope="col" class="fw-medium">Рецептура</th>
+                <th scope="col" class="fw-medium">Стоимость</th>
             </tr>
-        <?php endif; ?>
-        </tbody>
-    </table>
-</main>
-<footer class="wrapper text-white py-5" style="font-family: var(--bs-body-font-family),serif; font-weight: normal; background: #181818;">
-    <div class="container-fluid small">
-        <div class="row d-flex align-items-start">
-            <div class="col ps-0 d-flex justify-content-between align-items-center">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-2 me-3">
-                        <h6>Додо Пицца</h6>
-                        <ul class="list-unstyled">
-                            <li class="mb-1"><a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75">О нас</a></li>
-                            <li class="mb-1"><a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75">Додо-книга</a></li>
-                            <li class="mb-1"><a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75">Блог «Сила ума»</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-2">
-                        <h6>Работа</h6>
-                        <a href="#" class="d-block link-light link-underline link-underline-opacity-0 link-opacity-75">В пиццерии</a>
-                    </div>
-                    <div class="col-3">
-                        <h6>Партнерам</h6>
-                        <ul class="list-unstyled">
-                            <li class="mb-1"><a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75">Франшиза</a></li>
-                            <li class="mb-1"><a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75">Инвестиции</a></li>
-                            <li class="mb-1"><a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75">Поставщикам</a></li>
-                            <li class="mb-1"><a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75">Предложить помещение</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-4">
-                        <h6>Это интересно</h6>
-                        <ul class="list-unstyled">
-                            <li class="mb-1"><a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75">Почему мы готовим без перчаток?</a></li>
-                            <li class="mb-1"><a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75">Экскурсии и мастер-классы</a></li>
-                            <li class="mb-1"><a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75">Корпоративные заказы</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2 d-flex flex-column justify-content-start align-items-end">
-                <div class="d-flex justify-content-between align-items-center me-2 mb-2">
-                    <a class="me-2" href="https://app.appsflyer.com/id894649641?af_ad=icon&amp;pid=dodopizza.site&amp;af_click_lookback=7d&amp;c=web" target="_blank"
-                       aria-label="Скачать приложение для iOS">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" fill="none" class="app-link-svg" aria-hidden="true">
-                            <g clip-path="url(#f0cb63-a)">
-                                <path fill="#A6A6A6"
-                                      d="M110.135 0H9.535Q8.986 0 8.44.002q-.457.004-.919.013Q6.513.028 5.517.19a6.7 6.7 0 0 0-1.9.627A6.44 6.44 0 0 0 .193 5.521a13 13 0 0 0-.179 2.002c-.01.307-.01.615-.015.921V31.56c.005.31.006.61.015.921q.012 1.008.18 2.002c.11.663.32 1.306.624 1.905a6.2 6.2 0 0 0 1.179 1.614 6.3 6.3 0 0 0 1.618 1.179 6.7 6.7 0 0 0 1.901.63q.996.164 2.004.177c.31.007.613.011.919.011.366.002.728.002 1.095.002h100.6c.359 0 .724 0 1.084-.002.304 0 .617-.004.922-.01q1.006-.014 2-.178a6.8 6.8 0 0 0 1.908-.63A6.3 6.3 0 0 0 117.666 38a6.4 6.4 0 0 0 1.182-1.614c.302-.6.51-1.242.619-1.905q.167-.993.185-2.002c.004-.31.004-.61.004-.921.008-.364.008-.725.008-1.094V9.536q.002-.549-.008-1.092.001-.46-.004-.92a13.6 13.6 0 0 0-.185-2.003 6.7 6.7 0 0 0-.619-1.903 6.47 6.47 0 0 0-2.799-2.8 6.8 6.8 0 0 0-1.908-.627q-.993-.165-2-.176c-.305-.005-.618-.011-.922-.013-.36-.002-.725-.002-1.084-.002"></path>
-                                <path fill="#000"
-                                      d="M8.445 39.125c-.305 0-.602-.004-.904-.01a13 13 0 0 1-1.87-.164 5.9 5.9 0 0 1-1.656-.548 5.4 5.4 0 0 1-1.397-1.016 5.3 5.3 0 0 1-1.02-1.397 5.7 5.7 0 0 1-.544-1.657 12.4 12.4 0 0 1-.166-1.875c-.007-.21-.015-.913-.015-.913v-23.1s.009-.692.015-.895a12.4 12.4 0 0 1 .165-1.872 5.8 5.8 0 0 1 .544-1.662c.26-.518.603-.99 1.015-1.398A5.57 5.57 0 0 1 5.668 1.05Q6.6.9 7.543.887l.902-.012h102.769l.913.013a12.4 12.4 0 0 1 1.858.162 6 6 0 0 1 1.671.548 5.6 5.6 0 0 1 2.415 2.42c.261.52.441 1.076.536 1.649q.155.937.173 1.887c.003.283.003.588.003.89.008.375.008.732.008 1.092v20.929c0 .363 0 .718-.008 1.075 0 .325 0 .623-.004.93a12.5 12.5 0 0 1-.171 1.853 5.7 5.7 0 0 1-.54 1.67 5.5 5.5 0 0 1-1.015 1.386 5.4 5.4 0 0 1-1.4 1.022 5.9 5.9 0 0 1-1.668.55q-.928.152-1.869.163c-.293.007-.599.011-.897.011l-1.084.002z"></path>
-                                <path fill="#fff"
-                                      d="M24.769 20.3a4.95 4.95 0 0 1 2.356-4.151 5.07 5.07 0 0 0-3.99-2.158c-1.68-.176-3.308 1.005-4.164 1.005-.872 0-2.19-.988-3.608-.958a5.32 5.32 0 0 0-4.473 2.727c-1.934 3.349-.492 8.27 1.361 10.977.927 1.325 2.01 2.805 3.428 2.753 1.387-.058 1.905-.885 3.58-.885 1.658 0 2.144.885 3.59.852 1.489-.025 2.426-1.332 3.32-2.67a11 11 0 0 0 1.52-3.092 4.78 4.78 0 0 1-2.92-4.4m-2.732-8.09a4.87 4.87 0 0 0 1.115-3.49 4.96 4.96 0 0 0-3.208 1.66 4.64 4.64 0 0 0-1.144 3.36 4.1 4.1 0 0 0 3.237-1.53m20.265 14.93H37.57l-1.137 3.356h-2.005l4.484-12.418h2.083l4.483 12.418h-2.039zm-4.243-1.55h3.752l-1.85-5.446h-.051zm17.101.38c0 2.813-1.506 4.62-3.779 4.62a3.07 3.07 0 0 1-2.848-1.583h-.043v4.484h-1.86V21.442h1.8v1.506h.033a3.21 3.21 0 0 1 2.883-1.6c2.298 0 3.813 1.816 3.813 4.622zm-1.91 0c0-1.833-.948-3.038-2.393-3.038-1.42 0-2.375 1.23-2.375 3.038 0 1.824.955 3.046 2.375 3.046 1.445 0 2.392-1.197 2.392-3.046zm11.874 0c0 2.813-1.505 4.62-3.778 4.62a3.07 3.07 0 0 1-2.848-1.583h-.043v4.484h-1.859V21.442h1.799v1.506h.034a3.21 3.21 0 0 1 2.883-1.6c2.298 0 3.813 1.816 3.813 4.622zm-1.91 0c0-1.833-.947-3.038-2.392-3.038-1.42 0-2.375 1.23-2.375 3.038 0 1.824.955 3.046 2.375 3.046 1.445 0 2.392-1.197 2.392-3.046m8.496 1.066c.138 1.232 1.335 2.04 2.97 2.04 1.566 0 2.693-.808 2.693-1.919 0-.964-.68-1.54-2.29-1.936l-1.609-.388c-2.28-.55-3.339-1.617-3.339-3.348 0-2.142 1.867-3.614 4.519-3.614 2.624 0 4.423 1.472 4.483 3.614h-1.876c-.112-1.239-1.136-1.987-2.634-1.987s-2.521.757-2.521 1.858c0 .878.654 1.395 2.255 1.79l1.368.336c2.548.603 3.606 1.626 3.606 3.443 0 2.323-1.85 3.778-4.793 3.778-2.754 0-4.614-1.42-4.734-3.667zM83.346 19.3v2.142h1.722v1.472h-1.722v4.991c0 .776.345 1.137 1.102 1.137q.306-.006.611-.043v1.463q-.511.095-1.032.086c-1.833 0-2.548-.689-2.548-2.444v-5.19h-1.316v-1.472h1.316V19.3zm2.719 6.67c0-2.849 1.678-4.639 4.294-4.639 2.625 0 4.295 1.79 4.295 4.639 0 2.856-1.661 4.638-4.295 4.638s-4.294-1.782-4.294-4.638m6.695 0c0-1.954-.895-3.108-2.401-3.108s-2.4 1.162-2.4 3.108c0 1.962.894 3.106 2.4 3.106s2.401-1.144 2.401-3.106m3.426-4.528h1.772v1.541h.043a2.16 2.16 0 0 1 2.178-1.635q.322-.002.637.069v1.738a2.6 2.6 0 0 0-.835-.112 1.872 1.872 0 0 0-1.937 2.083v5.37h-1.858zm13.198 6.395c-.25 1.643-1.85 2.771-3.898 2.771-2.634 0-4.269-1.764-4.269-4.595 0-2.84 1.644-4.682 4.191-4.682 2.505 0 4.08 1.72 4.08 4.466v.637h-6.395v.112a2.35 2.35 0 0 0 .639 1.832 2.36 2.36 0 0 0 1.797.732 2.045 2.045 0 0 0 2.091-1.273zm-6.282-2.702h4.526a2.17 2.17 0 0 0-.608-1.634 2.17 2.17 0 0 0-1.612-.664 2.293 2.293 0 0 0-2.306 2.298M36.738 11.253h.798a1 1 0 0 0 1.125-.95c0-.551-.414-.907-1.116-.907a1.063 1.063 0 0 0-1.204.935h-.876a1.87 1.87 0 0 1 2.108-1.745c1.175 0 2.002.658 2.002 1.604a1.386 1.386 0 0 1-1.084 1.365v.07a1.39 1.39 0 0 1 1.327 1.443 1.995 1.995 0 0 1-2.228 1.774 1.984 1.984 0 0 1-2.241-1.765h.89c.053.57.577.939 1.35.939s1.28-.414 1.28-.997c0-.591-.476-.956-1.307-.956h-.824zm4.092 2.171c0-.81.604-1.277 1.674-1.344l1.22-.07v-.389c0-.476-.314-.744-.922-.744-.496 0-.84.182-.939.5h-.86c.09-.773.82-1.27 1.84-1.27 1.13 0 1.766.563 1.766 1.514v3.077h-.856v-.633h-.07a1.52 1.52 0 0 1-1.353.707 1.36 1.36 0 0 1-1.5-1.348m2.894-.384v-.377l-1.1.07c-.62.042-.901.253-.901.65 0 .405.351.64.835.64a1.06 1.06 0 0 0 1.166-.983m3.244-2.097v3.755h-.889v-4.503h2.965v.748zm7.462 1.501c0 1.431-.724 2.328-1.86 2.328a1.47 1.47 0 0 1-1.386-.756h-.07v2.179h-.89v-6h.856v.744h.067a1.56 1.56 0 0 1 1.414-.819c1.145 0 1.869.893 1.869 2.324m-.914 0c0-.95-.45-1.526-1.203-1.526-.748 0-1.216.587-1.216 1.53 0 .939.468 1.526 1.212 1.526.756 0 1.207-.575 1.207-1.53m2.097 3.866v-.765q.144.019.29.017a.77.77 0 0 0 .815-.628l.066-.22-1.63-4.52h.968l1.129 3.577h.07l1.125-3.576h.943l-1.679 4.689c-.385 1.095-.81 1.447-1.729 1.447a4 4 0 0 1-.368-.02zm4.468-2.89h.885c.087.397.459.604.98.604.591 0 .954-.26.954-.666 0-.434-.326-.641-.955-.641h-.673v-.69h.662c.537 0 .81-.207.81-.584 0-.33-.264-.583-.81-.583-.497 0-.86.211-.918.567h-.857a1.58 1.58 0 0 1 1.775-1.32c1.07 0 1.682.485 1.682 1.246a.925.925 0 0 1-.71.921v.07a1.01 1.01 0 0 1 .88 1.014c0 .856-.728 1.422-1.84 1.422-.984 0-1.783-.45-1.865-1.36m4.985 1.278v-4.503h.88v3.097h.071l2.075-3.097h.881v4.503h-.88v-3.114h-.067l-2.08 3.114zm8.76-3.755h-1.418v3.755h-.89v-3.755H70.1v-.748h3.726zm4.787 2.539a1.83 1.83 0 0 1-1.952 1.303 2.045 2.045 0 0 1-2.08-2.325 2.077 2.077 0 0 1 2.076-2.352c1.253 0 2.01.856 2.01 2.27v.31h-3.18v.05a1.19 1.19 0 0 0 1.2 1.29 1.08 1.08 0 0 0 1.07-.546zm-3.126-1.451h2.273a1.086 1.086 0 0 0-1.107-1.167 1.15 1.15 0 0 0-1.166 1.167m6.893-1.836h2.03c.882 0 1.398.446 1.398 1.145a.97.97 0 0 1-.76.951v.07a1.03 1.03 0 0 1 .962 1.038c0 .786-.59 1.299-1.579 1.299h-2.05v-4.503zm.881.682v1.166h.881c.537 0 .794-.207.794-.587 0-.351-.224-.58-.695-.58zm0 1.82v1.319h1.054c.525 0 .807-.232.807-.658 0-.45-.319-.662-.918-.662h-.943z"></path>
-                            </g>
-                            <defs>
-                                <clipPath id="f0cb63-a">
-                                    <path fill="#fff" d="M0 0h119.664v40H0z"></path>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
-                    <a href="https://app.appsflyer.com/ru.dodopizza.app?af_ad=icon&amp;pid=dodopizza.site&amp;af_click_lookback=7d&amp;c=web" target="_blank"
-                       aria-label="Скачать приложение для Android">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="135" height="40" fill="none" class="app-link-svg" aria-hidden="true">
-                            <path fill="#000" d="M130 0H5a5 5 0 0 0-5 5v30a5 5 0 0 0 5 5h125a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5"></path>
-                            <path fill="#A6A6A6"
-                                  d="M130 .8a4.2 4.2 0 0 1 4.2 4.2v30a4.2 4.2 0 0 1-4.2 4.2H5A4.2 4.2 0 0 1 .8 35V5A4.2 4.2 0 0 1 5 .8zm0-.8H5a5 5 0 0 0-5 5v30a5 5 0 0 0 5 5h125a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5"></path>
-                            <path fill="#fff"
-                                  d="M68.14 21.75A4.25 4.25 0 1 0 72.41 26a4.19 4.19 0 0 0-4.27-4.25m0 6.83a2.58 2.58 0 1 1 2.4-2.58 2.46 2.46 0 0 1-2.4 2.58m-9.31-6.83A4.25 4.25 0 1 0 63.09 26a4.19 4.19 0 0 0-4.27-4.25zm0 6.83A2.58 2.58 0 1 1 61.22 26a2.46 2.46 0 0 1-2.4 2.58zm-11.09-5.52v1.8h4.32a3.77 3.77 0 0 1-1 2.27 4.42 4.42 0 0 1-3.33 1.32 4.8 4.8 0 1 1 0-9.6A4.6 4.6 0 0 1 51 20.14l1.27-1.27A6.3 6.3 0 0 0 47.74 17a6.609 6.609 0 1 0 0 13.21 6 6 0 0 0 4.61-1.85 6 6 0 0 0 1.56-4.22 6 6 0 0 0-.1-1.13zm45.31 1.4a4 4 0 0 0-3.64-2.71 4 4 0 0 0-4 4.25 4.16 4.16 0 0 0 4.22 4.25 4.23 4.23 0 0 0 3.54-1.88l-1.45-1a2.43 2.43 0 0 1-2.09 1.18 2.16 2.16 0 0 1-2.06-1.29l5.69-2.35zm-5.8 1.42a2.33 2.33 0 0 1 2.22-2.48 1.65 1.65 0 0 1 1.58.9zM82.63 30h1.87V17.5h-1.87zm-3.06-7.3h-.07a3 3 0 0 0-2.24-1 4.26 4.26 0 0 0 0 8.51 2.9 2.9 0 0 0 2.24-1h.06v.61c0 1.63-.87 2.5-2.27 2.5a2.35 2.35 0 0 1-2.14-1.51l-1.63.68A4.05 4.05 0 0 0 77.29 34c2.19 0 4-1.29 4-4.43V22h-1.72zm-2.14 5.88a2.59 2.59 0 0 1 0-5.16A2.4 2.4 0 0 1 79.7 26a2.38 2.38 0 0 1-2.28 2.58zm24.38-11.08h-4.47V30h1.87v-4.74h2.61a3.889 3.889 0 1 0 0-7.76zm0 6H99.2v-4.26h2.65a2.147 2.147 0 0 1 1.517 3.662 2.15 2.15 0 0 1-1.517.628zm11.53-1.8a3.5 3.5 0 0 0-3.33 1.91l1.66.69a1.77 1.77 0 0 1 1.7-.92 1.8 1.8 0 0 1 1.792.931c.114.21.184.441.208.679v.13a4.1 4.1 0 0 0-1.95-.48c-1.79 0-3.6 1-3.6 2.81a2.9 2.9 0 0 0 .969 2.03 2.9 2.9 0 0 0 2.131.72 2.63 2.63 0 0 0 2.4-1.2h.06v1h1.8v-4.81c0-2.19-1.66-3.46-3.79-3.46zm-.23 6.85c-.61 0-1.46-.31-1.46-1.06 0-1 1.06-1.33 2-1.33a3.3 3.3 0 0 1 1.7.42 2.264 2.264 0 0 1-2.19 2zM123.74 22l-2.14 5.42h-.06L119.32 22h-2l3.33 7.58-1.9 4.21h1.95L125.82 22zm-16.81 8h1.87V17.5h-1.87z"></path>
-                            <path fill="url(#65b93d-a)" d="M10.44 7.54a2 2 0 0 0-.46 1.4v22.12a2 2 0 0 0 .46 1.4l.07.07L22.9 20.15v-.29L10.51 7.47z"></path>
-                            <path fill="url(#65b93d-b)" d="m27 24.28-4.1-4.13v-.29l4.1-4.14.09.05L32 18.56c1.4.79 1.4 2.09 0 2.89l-4.89 2.78z"></path>
-                            <path fill="url(#65b93d-c)" d="M27.12 24.22 22.9 20 10.44 32.46a1.63 1.63 0 0 0 2.08.06l14.61-8.3"></path>
-                            <path fill="url(#65b93d-d)" d="m27.12 15.78-14.61-8.3a1.63 1.63 0 0 0-2.08.06L22.9 20z"></path>
-                            <path fill="#000" d="m27 24.13-14.49 8.25a1.67 1.67 0 0 1-2 0l-.07.07.07.07a1.66 1.66 0 0 0 2 0l14.61-8.3z" opacity="0.2"></path>
-                            <path fill="#000" d="M10.44 32.32a2 2 0 0 1-.46-1.4v.15a2 2 0 0 0 .46 1.4l.07-.07zM32 21.3l-5 2.83.09.09L32 21.44A1.75 1.75 0 0 0 33 20a1.86 1.86 0 0 1-1 1.3"
-                                  opacity="0.12"></path>
-                            <path fill="#fff" d="M12.51 7.62 32 18.7a1.86 1.86 0 0 1 1 1.3 1.75 1.75 0 0 0-1-1.44L12.51 7.48c-1.4-.79-2.54-.13-2.54 1.47v.15c.03-1.61 1.15-2.27 2.54-1.48"
-                                  opacity="0.25"></path>
-                            <path fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="0.2"
-                                  d="M42.11 14.27h-.74v-2H42a2.86 2.86 0 0 0 .76-2.3V7h4v5.26h.67v2h-.74V13h-4.58zM43.5 10a4 4 0 0 1-.57 2.3h3V7.74H43.5zm9.91 2.22a3.12 3.12 0 0 1-4.4 0 3.24 3.24 0 0 1 0-4.45 3.1 3.1 0 0 1 4.4 0 3.23 3.23 0 0 1 0 4.45zm-3.83-.5a2.31 2.31 0 0 0 3.26 0 2.56 2.56 0 0 0 0-3.44 2.31 2.31 0 0 0-3.26 0 2.56 2.56 0 0 0 0 3.44zm8.6 1.41A3.06 3.06 0 0 1 55.06 10a3.06 3.06 0 0 1 3.12-3.13 2.77 2.77 0 0 1 2.2 1l-.54.52a2 2 0 0 0-1.67-.76 2.27 2.27 0 0 0-1.66.66 2.57 2.57 0 0 0 0 3.47 2.27 2.27 0 0 0 1.66.66 2.37 2.37 0 0 0 1.83-.89l.54.54a2.9 2.9 0 0 1-1 .78 3.15 3.15 0 0 1-1.36.28zm5.5-.13h-.77V7.74h-1.68V7h4.12v.74h-1.67zm6.97-6-2.27 5.06A1.51 1.51 0 0 1 67 13.13a1.5 1.5 0 0 1-.6-.13l.2-.71c.122.07.26.109.4.11a.7.7 0 0 0 .42-.1.94.94 0 0 0 .27-.38l.22-.48-2-4.43h.91l1.48 3.44L69.74 7zm.87 6V7h4.34v6h-.77V7.74h-2.8V13zm5.71 0V7H78v2.57h3V7h.77v6H81v-2.71h-3V13zm10.83-.78a3.12 3.12 0 0 1-4.4 0 3.24 3.24 0 0 1 0-4.45 3.1 3.1 0 0 1 4.4 0 3.23 3.23 0 0 1 0 4.45zm-3.83-.5a2.31 2.31 0 0 0 3.26 0 2.56 2.56 0 0 0 0-3.44 2.31 2.31 0 0 0-3.26 0 2.56 2.56 0 0 0 0 3.44zM92.09 13V7h2.17a1.76 1.76 0 0 1 1.22.46A1.51 1.51 0 0 1 96 8.63a1.3 1.3 0 0 1-.22.75 1.4 1.4 0 0 1-.59.49c.29.096.544.277.73.52.192.245.295.549.29.86a1.57 1.57 0 0 1-.54 1.22 1.85 1.85 0 0 1-1.28.49zm.77-3.43h1.4a.9.9 0 0 0 .7-.29A.89.89 0 0 0 95 8a.86.86 0 0 0-.67-.29H92.9zm0 2.69h1.55a.92.92 0 0 0 .72-.31 1 1 0 0 0 .28-.68 1 1 0 0 0-1-1h-1.52z"></path>
-                            <defs>
-                                <linearGradient id="65b93d-a" x1="21.8" x2="5.02" y1="8.71" y2="25.49" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#00A0FF"></stop>
-                                    <stop offset="0.01" stop-color="#00A1FF"></stop>
-                                    <stop offset="0.26" stop-color="#00BEFF"></stop>
-                                    <stop offset="0.51" stop-color="#00D2FF"></stop>
-                                    <stop offset="0.76" stop-color="#00DFFF"></stop>
-                                    <stop offset="1" stop-color="#00E3FF"></stop>
-                                </linearGradient>
-                                <linearGradient id="65b93d-b" x1="33.83" x2="9.64" y1="20" y2="20" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#FFE000"></stop>
-                                    <stop offset="0.41" stop-color="#FFBD00"></stop>
-                                    <stop offset="0.78" stop-color="orange"></stop>
-                                    <stop offset="1" stop-color="#FF9C00"></stop>
-                                </linearGradient>
-                                <linearGradient id="65b93d-c" x1="24.83" x2="2.07" y1="22.3" y2="45.05" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#FF3A44"></stop>
-                                    <stop offset="1" stop-color="#C31162"></stop>
-                                </linearGradient>
-                                <linearGradient id="65b93d-d" x1="7.3" x2="17.46" y1="0.18" y2="10.34" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#32A071"></stop>
-                                    <stop offset="0.07" stop-color="#2DA771"></stop>
-                                    <stop offset="0.48" stop-color="#15CF74"></stop>
-                                    <stop offset="0.8" stop-color="#06E775"></stop>
-                                    <stop offset="1" stop-color="#00F076"></stop>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </a>
-                </div>
-                <a href="https://appgallery.huawei.com/app/C101170713?sharePrepath=ag&amp;locale=ru_RU&amp;source=website" target="_blank"
-                   aria-label="Скачать приложение для Huawei в AppGallery">
-                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="150" height="40" viewBox="0 0 1133.853 340.157" class="app-link-svg" aria-hidden="true"><defs>
-                            <clipPath id="399f4d-a" clipPathUnits="userSpaceOnUse">
-                                <path d="M0 255.118h850.39V0H0Z"></path>
-                            </clipPath>
-                        </defs>
-                        <g
-                                clip-path="url(#399f4d-a)" transform="matrix(1.33333 0 0 -1.33333 0 340.157)">
-                            <path fill="#c0c1c1"
-                                  d="M790.398 255.118H60.027c-2.31 0-4.59 0-6.892-.013-1.927-.012-3.84-.049-5.785-.079-4.19-.105-8.433-.363-12.617-1.113-4.214-.738-8.131-1.999-11.967-3.947a40.5 40.5 0 0 1-10.191-7.42 39.4 39.4 0 0 1-7.418-10.207c-1.958-3.83-3.2-7.766-3.935-11.983-.76-4.169-1.02-8.386-1.128-12.604-.058-1.93-.065-3.867-.095-5.798V53.145c.03-1.955.037-3.848.095-5.804.108-4.217.369-8.435 1.128-12.604.735-4.217 1.977-8.17 3.935-11.989 1.909-3.75 4.406-7.206 7.418-10.163a39.5 39.5 0 0 1 10.19-7.42c3.837-1.968 7.754-3.21 11.968-3.972C38.917.443 43.16.196 47.35.08c1.945-.043 3.858-.067 5.785-.067C55.438 0 57.718 0 60.027 0h730.37c2.263 0 4.562 0 6.824.013 1.92 0 3.886.024 5.805.067 4.217.116 8.447.362 12.591 1.113 4.217.762 8.14 2.004 12.013 3.971a39.5 39.5 0 0 1 10.182 7.421c3 2.957 5.496 6.413 7.44 10.163 1.93 3.818 3.185 7.772 3.898 11.99.775 4.168 1.02 8.386 1.169 12.603.024 1.956.024 3.85.024 5.804.049 2.287.049 4.562.049 6.886v135.05c0 2.305 0 4.592-.05 6.873 0 1.931 0 3.867-.024 5.798-.149 4.218-.394 8.435-1.169 12.604-.713 4.217-1.967 8.152-3.898 11.983-1.943 3.768-4.439 7.224-7.439 10.206a40.6 40.6 0 0 1-10.182 7.421c-3.873 1.948-7.796 3.21-12.013 3.947-4.144.75-8.374 1.008-12.59 1.113-1.92.03-3.887.067-5.806.08-2.261.012-4.56.012-6.823.012"></path>
-                            <path d="M53.165 5.509c-1.918 0-3.79.024-5.693.067-3.52.099-7.695.295-11.768 1.027-3.843.695-7.258 1.827-10.431 3.45a34 34 0 0 0-8.795 6.4 33.5 33.5 0 0 0-6.424 8.792c-1.633 3.178-2.749 6.59-3.419 10.433-.768 4.236-.965 8.534-1.048 11.805-.04 1.328-.092 5.749-.092 5.749v148.722s.055 4.353.092 5.632c.083 3.298.28 7.593 1.042 11.786.673 3.865 1.789 7.274 3.422 10.465a33.9 33.9 0 0 0 6.391 8.8 35 35 0 0 0 8.828 6.438c3.234 1.642 6.644 2.764 10.41 3.425 4.239.759 8.536.949 11.807 1.032l5.681.077h744.023l5.748-.08c3.229-.08 7.526-.27 11.701-1.023 3.793-.664 7.224-1.792 10.519-3.45a34.7 34.7 0 0 0 8.762-6.394c2.576-2.557 4.733-5.527 6.443-8.841 1.623-3.218 2.73-6.627 3.369-10.381.732-3.972.959-8.051 1.094-11.882.019-1.782.019-3.698.019-5.604.049-2.361.049-4.608.049-6.874V60.03c0-2.286 0-4.517-.049-6.767 0-2.048 0-3.923-.025-5.854-.129-3.708-.356-7.784-1.076-11.67-.651-3.86-1.758-7.272-3.399-10.513-1.698-3.271-3.856-6.228-6.395-8.724a34 34 0 0 0-8.809-6.437c-3.266-1.66-6.598-2.76-10.502-3.462-4.034-.732-8.208-.928-11.768-1.027a246 246 0 0 0-5.65-.067l-6.825-.013z"></path>
-                            <path fill="#fff"
-                                  d="M289.6 92.718h22.031l-7.889 21.117q-1.624 4.375-3.205 9.665a289 289 0 0 0-3.102-9.565zm25.794-10.023h-29.51l-7.224-19.743h-12.975l28.9 73.728h12.263l29.56-73.728h-13.635Zm59.916-6.335q3.842 5.163 3.842 15.085 0 9.21-3.18 13.358c-2.122 2.764-4.943 4.145-8.471 4.145q-3.666.001-6.768-1.728c-2.067-1.154-4.038-2.698-5.901-4.632v-29.41q1.88-.915 4.374-1.45a23.6 23.6 0 0 1 4.938-.532q7.326 0 11.167 5.163m-33.047 28.062q-.002 6.105-.406 13.433h11.803q.658-3.41.916-6.972 7.326 7.99 16.79 7.99c3.662 0 7.057-.926 10.175-2.774q4.684-2.772 7.56-8.75 2.874-5.982 2.875-15.189-.001-9.618-3.286-16.436-3.28-6.816-9.182-10.328t-13.636-3.513q-5.599.002-11.041 1.884V41.073l-12.568-1.069zm90.803-28.061q3.842 5.163 3.842 15.085 0 9.21-3.18 13.358c-2.123 2.764-4.944 4.145-8.472 4.145q-3.666.001-6.768-1.728c-2.067-1.154-4.038-2.698-5.9-4.632v-29.41c1.25-.61 2.711-1.093 4.373-1.45a23.6 23.6 0 0 1 4.938-.532q7.326 0 11.167 5.163m-33.047 28.062c0 4.071-.138 8.546-.406 13.433h11.802q.66-3.41.917-6.972 7.325 7.99 16.792 7.99 5.494-.001 10.173-2.774 4.684-2.772 7.56-8.75 2.874-5.982 2.874-15.189 0-9.618-3.285-16.436-3.279-6.816-9.183-10.328-5.9-3.511-13.635-3.513-5.599.002-11.04 1.884V41.073l-12.569-1.069zm73.422-37.982q-8.142 4.501-12.519 12.896-4.374 8.398-4.373 19.845 0 12.416 5.036 21.092 5.039 8.673 13.714 13.024 8.67 4.35 19.461 4.35 6.36.001 12.134-1.4 5.775-1.397 10.765-3.84l-3.206-9.667q-10.029 4.781-19.13 4.782-7.685 0-13.46-3.281t-8.983-9.643c-2.134-4.24-3.206-9.36-3.206-15.366q.001-7.886 2.47-13.992 2.468-6.107 7.784-9.668 5.319-3.562 13.406-3.562 3.667 0 7.328.612 3.666.61 6.868 1.78V89.31H490.49v9.769h29.255V68.04a65.5 65.5 0 0 0-13.255-4.53q-6.942-1.575-13.816-1.574c-7.395 0-13.802 1.5-19.23 4.503m84.055 6.691q3.92 1.879 6.412 4.68v10.176q-5.14.559-8.395.56-7.785 0-10.761-2.519t-2.976-6.792q0-4.072 2.16-6.03 2.166-1.96 5.876-1.96 3.767 0 7.684 1.884m7.529-10.177q-.659 3.205-.862 7.277-2.9-3.464-7.559-5.876-4.651-2.417-10.504-2.417-4.734.001-8.626 1.855-3.891 1.858-6.182 5.598-2.29 3.74-2.289 9.133 0 7.987 5.751 12.746 5.748 4.759 19.18 4.758c3.362 0 6.684-.238 9.974-.713v1.07q0 7.275-3.105 10.251-3.102 2.976-8.903 2.977-4.017 0-8.6-1.17c-3.051-.782-5.734-1.713-8.04-2.799l-1.984 9.16q3.359 1.525 8.856 2.798 5.493 1.27 11.601 1.271 7.121 0 12.109-2.163 4.985-2.163 7.784-7.427c1.867-3.51 2.801-8.237 2.801-14.172V73.281q-.001-3.409.405-10.329zm22.396 13.18v64.874l12.514 1.017V78.368q0-3.508 1.197-4.959 1.193-1.45 3.792-1.45c.778 0 1.884.187 3.307.559l1.477-9.007q-1.785-.712-4.353-1.145a29.4 29.4 0 0 0-4.86-.43q-13.075 0-13.074 14.196m31.293 0v64.874l12.515 1.017V78.368q-.001-3.508 1.196-4.959 1.194-1.45 3.792-1.45c.778 0 1.884.187 3.307.559l1.477-9.007q-1.784-.712-4.352-1.145a29.5 29.5 0 0 0-4.86-.43q-13.076 0-13.075 14.196m62.127 20.656c-.234 4.376-1.34 7.66-3.307 9.846q-2.95 3.282-7.884 3.281-4.784.002-7.965-3.307-3.179-3.307-4.148-9.82Zm12.263-7.987h-35.923q.867-17.25 16.435-17.25 3.867 0 7.915.941a47 47 0 0 1 7.759 2.52l2.746-8.6q-9.208-4.477-20.71-4.477-8.749 0-14.756 3.306-6 3.308-9.032 9.516-3.025 6.205-3.025 14.96-.002 9.106 3.205 15.67 3.207 6.566 8.932 10.023c3.812 2.31 8.215 3.461 13.2 3.461q7.786 0 13.004-3.639 5.209-3.638 7.734-9.693 2.517-6.054 2.516-13.38zm10.127 15.264c0 3.02-.138 7.614-.406 13.79h11.753c.205-1.527.397-3.351.586-5.47.183-2.122.313-3.842.38-5.165q2.187 3.613 4.298 6.079a17.6 17.6 0 0 0 4.94 4.02q2.821 1.554 6.431 1.553 2.9 0 4.99-.611l-1.578-10.888q-1.832.56-4.073.559-4.425-.001-7.734-2.264-3.308-2.266-7.068-7.455v-35.26h-12.519zm40.51-63.578c-1.834.322-3.34.687-4.529 1.095l2.29 9.157c.844-.236 1.917-.464 3.206-.687a22 22 0 0 1 3.662-.33q8.342 0 12.517 10.738l.813 2.034-20.249 55.36h13.481l10.178-30.937q2.493-7.939 3.206-12.16a157 157 0 0 0 3.357 11.907l10.33 31.19h12.668L774.476 62.24q-2.848-7.888-6.157-12.72-3.308-4.835-7.809-7.175-4.506-2.34-10.866-2.34c-2.104 0-4.067.16-5.9.482"></path>
-                            <path fill="#c8102e" fill-rule="evenodd"
-                                  d="M172.35 208.706h-70.972c-33.433 0-45.662-12.229-45.662-45.66V92.071c0-33.43 12.229-45.66 45.66-45.66h70.952c33.433 0 45.684 12.23 45.684 45.66v70.973c0 33.432-12.23 45.661-45.662 45.661"></path>
-                            <path fill="#fff"
-                                  d="M126.521 114.582h6.509l-3.265 7.593Zm-1.602-3.825-1.931-4.418h-4.395l9.347 21.206h3.799l9.31-21.206h-4.514l-1.905 4.418Zm70.732-4.404h4.248v21.191h-4.248Zm-16.909 9.105h7.83v3.863h-7.83v4.343h11.367v3.868h-15.614V106.34h16.024v3.865h-11.777Zm-16.88-2.504-4.817 14.592h-3.514l-4.817-14.592-4.688 14.582h-4.582l7.396-21.209h3.564l4.825 13.931 4.823-13.93h3.595l7.377 21.208h-4.463Zm-49.756 2.445c0-3.449-1.712-5.293-4.823-5.293-3.127 0-4.85 1.896-4.85 5.441v11.986h-4.306V115.4c0-5.967 3.317-9.39 9.098-9.39 5.838 0 9.185 3.487 9.185 9.567v11.97h-4.304zm-24.251 12.146h4.304v-21.219h-4.304v8.617h-9.721v-8.617h-4.306v21.22h4.306v-8.56h9.721zm49.008 27.016c-14.896 0-27.015 12.12-27.015 27.015h3.817c0-12.79 10.407-23.198 23.198-23.198s23.198 10.407 23.198 23.198h3.817c0-14.896-12.119-27.015-27.015-27.015m152.031 14.582q2.637 1.77 3.942 4.872t1.306 7.093q0 3.919-1.155 6.981-1.155 3.064-3.69 4.885t-6.53 1.82q-3.816 0-6.478-1.845t-3.993-4.948q-1.33-3.1-1.331-6.842 0-3.942 1.256-7.057 1.255-3.114 3.842-4.92 2.586-1.81 6.403-1.81 3.791 0 6.429 1.771m-16.272-4.458q-3.993 2.286-6.103 6.416t-2.11 9.605q0 5.751 2.248 10.058 2.247 4.307 6.478 6.654 4.233 2.35 9.982 2.35 5.501 0 9.468-2.274 3.968-2.273 6.052-6.39 2.085-4.12 2.085-9.544 0-5.85-2.273-10.17t-6.48-6.654q-4.207-2.336-9.88-2.336-5.475 0-9.467 2.285m40.831 29.331h-11.275l.552 5.248h28.3l-.577-5.248h-10.722v-31.113h-6.278Zm51.378-31.113h-7.082l-10.823 16.021h-4.294v-16.021h-6.278v36.361h6.278v-15.016h3.29l7.534 10.898q1.656 2.436 3.327 3.528 1.67 1.093 4.206 1.093 2.11 0 3.767-.703l-1.306-4.897q-1.03.426-1.959.426-1.105 0-1.896-.552t-1.645-1.783l-6.654-9.542zm20.541 20.127q2.009 1.82 2.009 5.135 0 3.365-2.047 4.846-2.046 1.482-6.014 1.482h-3.415v-12.907q2.36-.377 3.616-.377 3.842 0 5.851 1.82m-15.745 16.235h9.794q6.905 0 10.572-2.812t3.666-8.136q0-3.616-1.645-6.316-1.644-2.7-4.582-4.143-2.938-1.444-6.756-1.444-2.084 0-4.771.502v-14.012h-6.278zm52.383-30.121q2.637 1.77 3.942 4.872 1.307 3.101 1.307 7.093 0 3.919-1.156 6.981-1.155 3.064-3.69 4.885-2.538 1.82-6.53 1.82-3.818 0-6.479-1.845t-3.993-4.948q-1.33-3.1-1.33-6.842 0-3.942 1.255-7.057 1.255-3.114 3.842-4.92 2.587-1.81 6.403-1.81 3.792 0 6.43 1.771m-16.273-4.458q-3.993 2.286-6.103 6.416t-2.109 9.605q0 5.751 2.248 10.058 2.247 4.307 6.478 6.654 4.233 2.35 9.982 2.35 5.5 0 9.467-2.274t6.053-6.39q2.083-4.12 2.084-9.544 0-5.85-2.273-10.17t-6.479-6.654q-4.207-2.336-9.88-2.336-5.476 0-9.468 2.285m45.904 37.743q-1.983 1.054-3.025 2.712a9.06 9.06 0 0 0-1.32 3.566h4.52q.729-4.017 4.722-4.018t4.747 4.018h4.544a9.1 9.1 0 0 0-1.318-3.566q-1.042-1.657-3.04-2.712-1.996-1.055-4.933-1.055-2.913 0-4.897 1.055m14.163-39.525v19.988q0 3.767.276 8.64l-18.255-28.628h-6.982v36.361h5.826v-20.767q0-3.39-.226-7.408l17.98 28.175h7.207v-36.36zm22.424 31.113h-11.275l.553 5.248h28.3l-.577-5.248H494.51v-31.113h-6.279Zm22.902 5.248h21.42l-.602-5.173h-14.54v-10.019h13.71v-4.847h-13.71v-11.099h15.319l-.528-5.223h-21.07zm61.386-30.146q1.92 1.57 1.92 4.432 0 3.039-2.121 4.62-2.121 1.583-6.114 1.583h-4.22v-12.204h4.722q3.892 0 5.813 1.569m-10.534 15.28h3.917q1.958 0 3.453.779c1.495.779 1.762 1.218 2.298 2.097q.803 1.318.804 2.9 0 2.235-1.621 3.34t-4.683 1.105h-4.168zm14.527-3.528a8.73 8.73 0 0 0 3.064-3.14q1.117-1.944 1.117-4.556 0-3.039-1.52-5.362-1.519-2.323-4.444-3.616t-7.02-1.293h-11.851v36.36h11.349q5.775 0 8.665-2.233 2.886-2.235 2.887-6.128 0-3.24-1.845-5.411-1.846-2.172-4.834-3.051 2.485-.377 4.432-1.57"></path>
-                        </g></svg>
-                </a>
-                <a href="#" class="mt-3 link-light link-underline link-underline-opacity-0 link-opacity-75 fw-light">feedback@dodopizza.com</a>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-4 ps-0">
-                <p class="fs-2 mb-2">1 664 151 498 ₽</p>
-                <p class="m-0 opacity-75">Выручка российской сети в этом месяце. В прошлом — 8 754 944 418 ₽</p>
-            </div>
-            <div class="col-4">
-                <p class="fs-2 mb-2">1233 пиццерии</p>
-                <p class="m-0 opacity-75">в 24 странах, от Турции до Нигерии</p>
-            </div>
-        </div>
-        <div class="row border-top border-secondary border-opacity-25 mt-4 pt-4">
-            <div class="col-8 d-flex align-items-center ps-0">
-                <svg height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 305.8 64" fill="white" class="opacity-75 m-0 p-0">
-                    <path d="M291.3 35c-1.4 0-2.8-.2-4.1-.5l4-8.9 4 8.9c-1.3.3-2.6.5-3.9.5m14.1 6.8-9.3-20.4c-1.1-2.2-2.5-3.2-4.6-3.2h-.4c-2.2 0-3.6 1-4.7 3.2l-9.3 20.4c-.9 2-.3 3.8 1.6 4.5 1.6.7 3.4.1 4.2-1.5l.1-.2 2.1-4.4c2.1.7 4.2 1 6.4 1 2.1 0 4.2-.3 6.1-1l2 4.4c.6 1.6 2.4 2.4 4.1 1.8h.1l.2-.1c1.6-.7 2.4-2.6 1.7-4.2-.2-.1-.2-.2-.3-.3m-33.6-1.9H270V21.3c.1-1.8-1.4-3.3-3.2-3.4h-.3c-1.8-.1-3.3 1.3-3.4 3.1v19h-11.9V21.3c-.1-1.9-1.7-3.4-3.7-3.3-1.8.1-3.2 1.5-3.3 3.3v22c-.1 1.8 1.2 3.3 3 3.4h21v3c-.1 1.8 1.2 3.3 3 3.4h.3c1.7.1 3.3-1.2 3.4-2.9v-6.7c.2-1.7-1.1-3.2-2.7-3.4h-.6m-34.4-.2h-1.8V21.3c.1-1.8-1.4-3.3-3.2-3.4h-.2c-1.8 0-3.2 1.4-3.3 3.2V40h-11.9V21.3c-.1-1.9-1.7-3.4-3.7-3.3-1.8.1-3.2 1.5-3.3 3.3v22c-.1 1.8 1.2 3.3 3 3.4h21v3c-.1 1.8 1.2 3.3 3 3.4h.3c1.7.2 3.3-1.1 3.5-2.8v-6.9c.2-1.7-1.1-3.2-2.7-3.4h-.6M199 18.2h-.3c-2 0-3.4 1-4.8 3l-11.2 15.9V21.5c0-1.8-1.5-3.3-3.3-3.3s-3.3 1.5-3.3 3.3v21.2c-.1 2 1.3 3.7 3.3 3.8h.9c2.1 0 3.6-1.1 4.9-3l11.2-15.9v15.5c0 1.8 1.5 3.3 3.3 3.3s3.3-1.5 3.3-3.3V22c.2-2-1.3-3.7-3.3-3.8zm-33.4 0h-19.2c-1.7-.1-3.3 1.2-3.4 2.9v22.4c-.1 1.8 1.4 3.3 3.2 3.4h.3c1.8.1 3.3-1.3 3.4-3.1v-19h12.3v18.7c-.1 1.8 1.3 3.3 3.1 3.4h.4c1.8.1 3.4-1.3 3.5-3.1V21.5c0-1.8-1.4-3.3-3.1-3.3zm-49.7 22.2c-4.5 0-7.7-3.4-7.7-8 0-4.3 3.5-7.7 7.7-7.7s7.7 3.5 7.7 7.7c.1 4.6-3.1 8-7.7 8m0-22.4c-7.9-.2-14.4 6-14.6 13.9v.6c-.2 7.9 6.1 14.4 13.9 14.5h.6c7.9.1 14.5-6.2 14.6-14.1v-.4c.1-7.8-6.2-14.3-14-14.4zM88 40H76.7c.8-1.5 1.3-3.1 1.7-4.8.4-2.3.7-4.7.7-7l.1-3.3h8.7zm8.6 0h-1.8V21.5c.1-1.8-1.2-3.3-3-3.4H75.6c-1.9 0-3.1 1.2-3.1 3.4V26q.15 4.2-.6 8.4c-.3 2-1.1 3.9-2.2 5.6h-.8c-1.7-.1-3.2 1.1-3.3 2.8v6.9c-.1 1.8 1.2 3.3 3 3.4h.3c1.7.1 3.3-1.2 3.4-2.9v-3.4H93v3c-.1 1.8 1.2 3.3 3 3.4h.3c1.7.1 3.3-1.2 3.4-2.9v-6.7c.2-1.6-.9-3.2-2.6-3.4h-.7m-46.1.2c-4.5 0-7.7-3.4-7.7-8 0-4.3 3.5-7.7 7.7-7.7 4.3 0 7.7 3.5 7.7 7.7.1 4.6-2.9 8-7.7 8m0-22.4c-7.9-.2-14.4 6-14.6 13.9v.6c-.2 7.9 6 14.4 13.9 14.5h.7c7.9.1 14.5-6.2 14.6-14.1v-.4C65 24 58.7 18 50.3 18M22.2 40H11c.8-1.6 1.3-3.2 1.7-4.9.4-2.3.7-4.7.7-7l.1-3.3h8.7zm8.6 0H29V21.5c.1-1.8-1.2-3.3-3-3.4H10c-1.9 0-3.1 1.2-3.1 3.4V26q.15 4.2-.6 8.4c-.3 2-1.1 3.9-2.2 5.6h-.8C1.6 39.9.1 41.1 0 42.8v6.9c-.1 1.8 1.2 3.3 3 3.4h.3c1.7.1 3.3-1.2 3.4-2.9v-3.4h20.7v3c-.1 1.8 1.2 3.3 3 3.4h.3c1.7.1 3.3-1.2 3.4-2.9v-6.7c.2-1.7-1.1-3.2-2.7-3.4-.2-.3-.4-.3-.6-.2"></path>
-                </svg>
-                <p class="opacity-75 fs-6 fw-light m-0 ms-2">©&nbsp;<!-- -->2025</p>
-                <a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75 ms-3 fs-6">Правовая информация</a>
-                <a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75 ms-3 fs-6">Калорийность и состав</a>
-                <a href="#" class="link-light link-underline link-underline-opacity-0 link-opacity-75 ms-3 fs-6">Помощь</a>
-            </div>
-            <div class="col d-flex justify-content-end gap-3 px-0">
-                <div class="d-flex gap-3">
-                    <a class="btn btn-secondary d-flex align-items-center justify-content-center p-1" style="height: 32px; width: 32px;" href="https://ok.ru/dodopizza" target="_blank"
-                       aria-label="Перейти в одноклассники">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.481 95.481" aria-hidden="true">
-                            <path d="M43.041 67.254c-7.402-.772-14.076-2.595-19.79-7.064-.709-.556-1.441-1.092-2.088-1.713-2.501-2.402-2.753-5.153-.774-7.988 1.693-2.426 4.535-3.075 7.489-1.682.572.27 1.117.607 1.639.969 10.649 7.317 25.278 7.519 35.967.329 1.059-.812 2.191-1.474 3.503-1.812 2.551-.655 4.93.282 6.299 2.514 1.564 2.549 1.544 5.037-.383 7.016-2.956 3.034-6.511 5.229-10.461 6.761-3.735 1.448-7.826 2.177-11.875 2.661.611.665.899.992 1.281 1.376 5.498 5.524 11.02 11.025 16.5 16.566 1.867 1.888 2.257 4.229 1.229 6.425-1.124 2.4-3.64 3.979-6.107 3.81-1.563-.108-2.782-.886-3.865-1.977-4.149-4.175-8.376-8.273-12.441-12.527-1.183-1.237-1.752-1.003-2.796.071-4.174 4.297-8.416 8.528-12.683 12.735-1.916 1.889-4.196 2.229-6.418 1.15-2.362-1.145-3.865-3.556-3.749-5.979.08-1.639.886-2.891 2.011-4.014 5.441-5.433 10.867-10.88 16.295-16.322.359-.362.694-.746 1.217-1.305"></path>
-                            <path d="M47.55 48.329c-13.205-.045-24.033-10.992-23.956-24.218C23.67 10.739 34.505-.037 47.84 0c13.362.036 24.087 10.967 24.02 24.478-.068 13.199-10.971 23.897-24.31 23.851m12.001-24.186c-.023-6.567-5.253-11.795-11.807-11.801-6.609-.007-11.886 5.316-11.835 11.943.049 6.542 5.324 11.733 11.896 11.709 6.552-.023 11.768-5.285 11.746-11.851"></path>
-                        </svg>
-                    </a>
-                    <a class="btn btn-secondary d-flex align-items-center justify-content-center p-1" style="height: 32px; width: 32px;" target="_blank" aria-label="Перейти во Вконтакте">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 0 140 140" aria-hidden="true">
-                            <path d="M127.62 39c.84-2.8 0-4.86-4-4.86h-13.21a5.71 5.71 0 0 0-5.75 3.74s-6.72 16.38-16.24 27c-3.08 3.08-4.48 4.06-6.16 4.06-.84 0-2.1-1-2.1-3.78V39c0-3.36-.93-4.86-3.73-4.86H55.67a3.19 3.19 0 0 0-3.36 3c0 3.19 4.76 3.92 5.25 12.88v19.49c0 4.27-.77 5-2.45 5-4.48 0-15.38-16.45-21.84-35.28-1.27-3.66-2.54-5.14-5.91-5.14H14.14c-3.78 0-4.53 1.78-4.53 3.74 0 3.5 4.48 20.86 20.86 43.82 10.92 15.68 26.3 24.18 40.3 24.18 8.4 0 9.44-1.89 9.44-5.14V88.88c0-3.78.8-4.53 3.46-4.53 2 0 5.32 1 13.16 8.54 9 9 10.44 13 15.48 13h13.21c3.78 0 5.66-1.89 4.57-5.61s-5.47-9.1-11.15-15.48c-3.08-3.64-7.7-7.56-9.1-9.52-2-2.52-1.4-3.64 0-5.88 0-.03 16.1-22.71 17.78-30.4"></path>
-                        </svg>
-                    </a>
-                    <a class="btn btn-secondary d-flex align-items-center justify-content-center p-1" style="height: 32px; width: 32px;" target="_blank" aria-label="Перейти на Ютуб">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 0 140 140" aria-hidden="true">
-                            <path d="M70 30.36c-22.31 0-44.61 1.71-49.51 5.12-9.8 6.83-9.8 62.19 0 69s89.22 6.83 99 0 9.8-62.19 0-69c-4.9-3.42-27.21-5.12-49.51-5.12ZM58.69 53.43 87.39 70l-28.7 16.57z"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row small d-flex flex-column opacity-25 mt-3">
-            <p class="m-0 p-0">© 2025 ООО "Додо Франчайзинг"</p>
-            <p class="m-0 p-0">ОГРН 1131101001844, ИНН 1101140415</p>
-            <p class="m-0 p-0">167001, Республика Коми, г. Сыктывкар, Октябрьский проспект, д. 16</p>
-        </div>
-    </div>
-</footer>
-<script src="./assets/js/bootstrap.bundle.js"></script>
-</body>
-</html>
+            </thead>
+            <tbody>
+            <?php if (!empty($foodItems)): ?>
+                <?php foreach ($foodItems as $row): ?>
+                    <tr>
+                        <th scope="row">
+                            <img src="assets/images/menu/<?php echo htmlspecialchars($row['img_path']); ?>" alt="image" style="max-width: 200px;">
+                        </th>
+                        <td class="fw-light"><?php echo htmlspecialchars($row['name']); ?></td>
+                        <td class="fw-light"><?php echo htmlspecialchars($row['category_name']); ?></td>
+                        <td class="fw-light"><?php echo htmlspecialchars($row['recipe']); ?></td>
+                        <td class="fw-light"><?php echo htmlspecialchars($row['cost']); ?> ₽</td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="5">Нет данных</td>
+                </tr>
+            <?php endif; ?>
+            </tbody>
+        </table>
+    </main>
+
+<?php
+require_once($_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php');
+?>
